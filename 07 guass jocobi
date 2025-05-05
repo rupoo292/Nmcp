@@ -1,0 +1,59 @@
+Program for Gauss Jacobi Method"
+
+def f(i1,i2,i3):
+    return(1/3*(7-4*i2))
+def g(i1,i2,i3):
+    return(1/11*(2+3*i1+5*i3))
+def h(i1,i2,i3):
+    return(1/11*(-28+6*i1-6*i2))
+
+i10=float(input("Enter initial value of i1\t"))
+i20=float(input("Enter initial value of i1\t"))
+i30=float(input("Enter initial value of i1\t"))
+n=int(input("Enter no.of iterations\t"))
+
+i=0
+while(i<n):
+    print("Applying %d iteration"%(i+1))
+    i11=f(i10,i20,i30)
+    i21=g(i10,i20,i30)
+    i31=h(i10,i20,i30)
+    print("The Value of i1 is",i11)
+    print("The Value of i2 is",i21)
+    print("The Value of i3 is",i31)
+    i10=i11
+    i20=i21
+    i30=i31
+    i=i+1
+    print("The iterations Ended")
+
+#OUTPUT_
+Enter initial value of i1	0
+Enter initial value of i1	0
+Enter initial value of i1	0
+Enter no.of iterations	5
+Applying 1 iteration
+The Value of i1 is 2.333333333333333
+The Value of i2 is 0.18181818181818182
+The Value of i3 is -2.5454545454545454
+The iterations Ended
+Applying 2 iteration
+The Value of i1 is 2.090909090909091
+The Value of i2 is -0.3388429752066115
+The Value of i3 is -1.3719008264462813
+The iterations Ended
+Applying 3 iteration
+The Value of i1 is 2.7851239669421486
+The Value of i2 is 0.12847483095416973
+The Value of i3 is -1.2201352366641625
+The iterations Ended
+Applying 4 iteration
+The Value of i1 is 2.1620335587277735
+The Value of i2 is 0.3867905197732394
+The Value of i3 is -1.0963731985520115
+The iterations Ended
+Applying 5 iteration
+The Value of i1 is 1.8176126403023471
+The Value of i2 is 0.2731122439475692
+The Value of i3 is -1.5771401605702542
+The iterations Ended

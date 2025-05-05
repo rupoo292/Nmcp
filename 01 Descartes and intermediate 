@@ -1,0 +1,90 @@
+Program for intermediate value theorem"
+
+def f(x):
+    return(x*x*x-5*x+1)
+
+
+a= float(input("Enter the 1st value of interval\t"))
+
+b= float(input("Enter the 2nd  value of interval\t"))
+
+if (f(a)*f(b)<0):
+    print("one or odd no. no roots lies in the given interval")
+else:
+    print("No root lies in the interval")
+    
+print("Program ended")
+
+OUTPUT:
+
+runfile('C:/Users/EL-COMP LAB-2/untitled0.py', wdir='C:/Users/EL-COMP LAB-2')
+Enter the 1st value of interval	0
+Enter the 2nd  value of interval	1
+one or odd no. no roots lies in the given interval
+Program ended
+
+
+
+
+
+
+
+
+
+
+"Program for Descartes rule of sign"
+
+CODE:
+
+import numpy as np
+n=int(input("Enter the degree of equation\t"))
+A=[0 for x in range(n+1)]
+for x in range(n+1):
+       print ("Enter the value of coefficient x%d"%n)
+       A[x]=int(input())
+       n=n-1
+       
+eq=np.poly1d(A)
+print(eq)
+
+
+"Program for descartes rule of sign"
+
+
+import numpy as np
+n=int(input("Enter the degree of equation\t"))
+nn=n
+A=[0 for i in range(n+1)]
+B=[0 for i in range(n+1)]
+for i in range(n+1):
+       print ("Enter the value of coefficient x%d"%n)
+       A[i]=int(input())
+       n=n-1
+       
+eq=np.poly1d(A)
+print(eq)
+
+
+n=nn
+B[i]=(-1)**(n-i)*A[i]       
+eq2=np.poly1d(B)
+print(eq2)
+
+OUTPUT:
+runfile('C:/Users/EL-COMP LAB-2/untitled1.py', wdir='C:/Users/EL-COMP LAB-2')
+Enter the degree of equation	3
+Enter the value of coefficient x3
+1
+Enter the value of coefficient x2
+0
+Enter the value of coefficient x1
+-5
+Enter the value of coefficient x0
+1
+   3
+1 x - 5 x + 1
+         
+         
+
+
+

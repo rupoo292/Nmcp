@@ -1,0 +1,52 @@
+Program for matrix transposition"
+
+
+import numpy as np
+r=int(input("Enter the no of rows\t"))
+c=int(input("Enter the no of columns\t"))
+
+print("Enter the matrix element rowwise \n")
+A=[[int(input ()for x in range(c)]for y in range(r)]
+
+print("The given matrix A is \n",A)
+print("The given matrix A is \n")
+for row in A :
+ print(row)
+
+B=np.transpose(A)
+print("The given matrix B is \n")
+for row in B:
+print(row)
+
+output:
+
+runfile('c:/user/EL-COMP LAB-2/
+untitled3.py',wdir=c:user/EL-COMP
+LAB-2")
+Enter the no. of rows   4
+Enter the no. of columns   3
+Enter the matrix A element rowwise
+1
+2
+3
+7
+8
+9
+5
+8
+0
+4
+5
+6
+The given matrix is
+[[1,2,3],[7.8.9],[5,8,0],[4,5,6]]
+The given matrix A is 
+
+[1,2,3]
+[7,8,9]
+[5,8,0]
+[4,5,6]
+The given matrix B is 
+[1 7 5 4]
+[2 8 8 5]
+[3 9 0 6]

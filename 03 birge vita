@@ -1,0 +1,42 @@
+program for bierge veita method"
+
+CODE:
+
+import numpy as np
+
+n=int(input("enter degree of equation\t"))
+
+A=np.array([0.0 for i in range(n+1)])
+
+B=np.array([0.0 for i in range(n+1)])
+
+C=np.array([0.0 for i in range(n)])
+
+
+for j in range (n+1):
+    print("enter value of coefficient x%d"%(n-j))
+    A[j]=float(input())
+
+iter=int(input("enter no. of iteration\t"))
+p0=float(input("enter intial approximation value of root"))
+B[0]=A[0]
+C[0]=B[0]
+
+i=0
+while (i<iter):
+    print("applying %d iteration of birge veita method \n"%(i+1))
+    j=1
+    while(j<n+1):
+       B[j]=A[j]+p0*B[j-1]
+       j=j+1
+     
+    j=1
+    while(j<n):
+      C[j]=B[j]+p0*C[j-1]
+      j=j+1
+    print(A)
+    print(B)
+    print(C)
+    p1=p0-(B[n]/C[n-1])
+    print("the value of next approx. root is ",p1)
+    p0=p1

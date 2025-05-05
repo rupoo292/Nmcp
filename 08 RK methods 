@@ -1,0 +1,39 @@
+Program for 4th order R-K Method"
+
+def f(t,i):
+    return(20-5*i)
+
+
+t0=float(input("Enter the initial value of t\t"))
+
+i0=float(input("Enter the initial value of i\t"))
+
+t=float(input("Enter the final value of of t\t"))
+
+h=float(input("Enter the step size h:\t"))
+
+n=(t-t0)/h
+i=i0 
+while(i<n):
+    print("applying %d iterations")
+    k1=h*f(t0,i0)
+    k2=h*f(t0+h/2,i0+k1/2)
+    k3=h*f(t0+h/2,i0+k2/2)
+    k4=h*f(t0+h/2,i0+k3)
+    k=1/6*(k1+2*k2+2*k3+k4)
+    
+    i1=i0+k
+    t1=t0+h
+    print("the value of i at t=%f is %f"%(t1,i1))
+    
+    i=i+i1
+    print("the iteration ended")
+
+
+OUTPUT=Enter the initial value of t	0
+Enter the initial value of i	0
+Enter the final value of of t	0.1
+Enter the step size h:	0.1
+applying %d iterations
+the value of i at t=0.100000 is 1.572917
+the iteration ended

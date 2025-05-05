@@ -1,0 +1,34 @@
+program for bisection method"
+import math
+
+def f(x):
+    return(math.cos(x)-x*math.exp(x))
+a=float(input("Enter the 1st value of interval\t"))
+b=float(input("Enter the 2nd value of interval\t"))
+
+iter=int(input("enter the value of iteration"))
+
+i=0
+while(i<iter):
+    m=(a+b)/2
+    if (f(a)*f(m)<0):
+        b=m
+    else:
+        a=m
+          
+    print("after %d iteration the new interval is (%f,%f)"%(i,a,b))
+    i=i+1
+      
+       
+
+
+o\p runfile('C:/Users/EL-COMP LAB-2/Desktop/untitled0.py', wdir='C:/Users/EL-COMP LAB-2/Desktop')
+Enter the 1st value of interval	0
+Enter the 2nd value of interval	1
+enter the value of iteration5
+after 0 iteration the new interval is (0.500000,1.000000)
+after 1 iteration the new interval is (0.500000,0.750000)
+after 2 iteration the new interval is (0.500000,0.625000)
+after 3 iteration the new interval is (0.500000,0.562500)
+after 4 iteration the new interval is (0.500000,0.531250)
+    
